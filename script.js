@@ -5,7 +5,7 @@ function wishHappyNewYear() {
     const newYearWish = document.getElementById('newYearWish');
     const fireworks = document.getElementById('fireworks');
 
-    newYearWish.innerText = `Happy New Year, ${name}! 🎉🎆`;
+    newYearWish.innerText = `Happy New Year, ${name}! 🎉🎆, Have a Wonderful 2024!`;
     fireworks.style.display = 'block';
     startFireworksAnimation();
   }

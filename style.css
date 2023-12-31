@@ -75,10 +75,12 @@ body {
 
     .Welcome {
             font-size: 70px;
+            font-weight: 500;
         }
 
      .wish{
-        font-size: 40px;
+        font-size: 35px;
+        font-weight: 400;
      }
     /* Adjustments for other elements as needed */
     .container {
