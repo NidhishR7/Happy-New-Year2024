@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    /* To prevent scrollbars */
+}
+.Welcome{
+    font-size: 50px;
+}
+.container {
+    text-align: center;
+}
+
+#fireworks {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.firework {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #f00;
+    border-radius: 50%;
+    opacity: 0;
+    animation: explode 1s linear infinite;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+/* For screens smaller than 768px (typical mobile devices) */
+@media only screen and (max-width: 767px) {
+
+    /* Your CSS styles for mobile devices */
+  
+    /* Adjustments for other elements as needed */
+    .container {
+        /* Example container styles for mobile */
+        padding: 20px;
+    }
+
+    .Welcome{
+        font-size: 70px;
+    }
+    /* Additional styles specific to mobile devices */
+}
+
+/* For screens larger than 768px (tablets and larger screens) */
+@media only screen and (min-width: 768px) {
+
+    .Welcome {
+            font-size: 70px;
+        }
+    /* Adjustments for other elements as needed */
+    .container {
+        /* Example container styles for larger screens */
+        padding: 40px;
+    }
+
+    /* Additional styles specific to larger screens */
+}
+
+
