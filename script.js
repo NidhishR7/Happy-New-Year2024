@@ -3,10 +3,11 @@ function wishHappyNewYear() {
 
   if (name !== null && name.trim() !== '') {
     const newYearWish = document.getElementById('newYearWish');
-    const fireworks = document.getElementById('fireworks');
+    const fireworks = document.createElement('div');
+    fireworks.setAttribute('id', 'fireworks');
 
     newYearWish.innerText = `Happy New Year, ${name}! 🎉🎆, Have a Wonderful 2024!`;
-    fireworks.style.display = 'block';
+    document.body.appendChild(fireworks);
     startFireworksAnimation();
   }
 }
@@ -14,15 +15,23 @@ function wishHappyNewYear() {
 function startFireworksAnimation() {
   const fireworks = document.getElementById('fireworks');
 
-  for (let i = 0; i < 25; i++) {
-    const firework = document.createElement('div');
-    firework.classList.add('firework');
-    const randomX = Math.random() * window.innerWidth;
-    const randomY = Math.random() * window.innerHeight;
-    firework.style.left = `${randomX}px`;
-    firework.style.top = `${randomY}px`;
-    fireworks.appendChild(firework);
-  }
-}
+  // Create SVG element for fireworks
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', '0 0 100 100');
+  svg.setAttribute('xmlns', svgNS);
+  svg.setAttribute('class', 'fireworks-svg');
 
+  // Add fireworks shapes (circles for this example)
+  for (let i = 0; i < 50; i++) {
+    const circle = document.createElementNS(svgNS, 'circle');
+    circle.setAttribute('cx', Math.random() * 100 + '');
+    circle.setAttribute('cy', Math.random() * 100 + '');
+    circle.setAttribute('r', Math.random() * 3 + '');
+    circle.style.fill = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
+    svg.appendChild(circle);
+  }
+
+  fireworks.appendChild(svg);
+}
 window.onload = wishHappyNewYear; // Call the function when the page loads

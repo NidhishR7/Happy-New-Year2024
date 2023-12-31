@@ -7,7 +7,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    color: white;
+    background-color: #000000;
     overflow: hidden;
     font-family: 'Work Sans', sans-serif;
     /* To prevent scrollbars */
@@ -20,25 +21,22 @@ body {
 }
 
 #fireworks {
-    display: none;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    /* Use viewport width for mobile devices */
+    height: 100vh;
+    /* Use viewport height for mobile devices */
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+    /* Ensure fireworks cover the entire screen */
 }
-
-.firework {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: #f00;
-    border-radius: 50%;
-    opacity: 0;
-    animation: explode 1s linear infinite;
-}
-
-@keyframes explode {
+@keyframes fireworksAnimation {
     0% {
         transform: scale(1);
         opacity: 1;
@@ -48,6 +46,11 @@ body {
         transform: scale(10);
         opacity: 0;
     }
+}
+
+.fireworks-svg circle {
+    transform-origin: center;
+    animation: fireworksAnimation 1s linear infinite;
 }
 
 /* For screens smaller than 768px (typical mobile devices) */
