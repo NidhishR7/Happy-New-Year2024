@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -7,6 +9,7 @@ body {
     margin: 0;
     background-color: #f0f0f0;
     overflow: hidden;
+    font-family: 'Work Sans', sans-serif;
     /* To prevent scrollbars */
 }
 .Welcome{
@@ -59,8 +62,11 @@ body {
     }
 
     .Welcome{
-        font-size: 70px;
+        font-size: 80px;
     }
+    .wish {
+            font-size: 70x;
+        }
     /* Additional styles specific to mobile devices */
 }
 
@@ -70,6 +76,10 @@ body {
     .Welcome {
             font-size: 70px;
         }
+
+     .wish{
+        font-size: 40px;
+     }
     /* Adjustments for other elements as needed */
     .container {
         /* Example container styles for larger screens */
