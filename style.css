@@ -33,7 +33,7 @@ body {
     width: 8px;
     height: 8px;
     background: #f00;
-    border-radius: 100%;
+    border-radius: 50%;
     opacity: 0;
     animation: explode 1s linear infinite;
 }
@@ -61,27 +61,24 @@ body {
         padding: 20px;
     }
 
-    .Welcome{
-        font-size: 80px;
-    }
-    .wish {
-            font-size: 70x;
-        }
+         .Welcome {
+             font-size: 30px;
+             font-weight: 500;
+         }
+                  .wish {
+                      font-size: 15px;
+                      font-weight: 400;
+                  }
+    
     /* Additional styles specific to mobile devices */
 }
 
 /* For screens larger than 768px (tablets and larger screens) */
 @media only screen and (min-width: 768px) {
 
-    .Welcome {
-            font-size: 70px;
-            font-weight: 500;
-        }
+   
 
-     .wish{
-        font-size: 35px;
-        font-weight: 400;
-     }
+    
     /* Adjustments for other elements as needed */
     .container {
         /* Example container styles for larger screens */
